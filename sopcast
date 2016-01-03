@@ -6,7 +6,10 @@ sp_sc_binary = '/usr/bin/sp'
 vlc_binary = '/usr/bin/vlc'
 
 def connect_to(translation):
-	return
+	sp_open_connection = sp_sc_binary + " " + translation + " 3908 8908 > /dev/null &"
+	os.system(sp_open_connection)
+	vlc_open_translation = vlc_binary + " http://localhost:8908/tv.asf"
+	os.system(vlc_open_translation)
 
 if(len(sys.argv) == 2):
 	connect_to(sys.argv[1])
