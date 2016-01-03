@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+
+import sys, os
+
+sp_sc_binary = '/usr/bin/sp'
+vlc_binary = '/usr/bin/vlc'
+
+def connect_to(translation):
+	return
+
+if(len(sys.argv) == 2):
+	connect_to(sys.argv[1])
+else:
+	print("Usage:\n")
+	print("sopcast sop://broker.sopcast.com:3912/6001")
